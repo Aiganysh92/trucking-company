@@ -17,11 +17,12 @@ export default function QuoteForm() {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   const freightOptions = [
-    'Full Truckload (FTL)',
-    'Less Than Truckload (LTL)',
-    'Expedited Freight',
-    'Dedicated Transportation',
-    'Other / Specialty Freight',
+    'Dry Van',
+    'Reefer (Temperature Controlled)',
+    'Flatbed',
+    'Box Truck',
+    'Expedited',
+    'Other',
   ];
 
   const handleChange = (e) => {

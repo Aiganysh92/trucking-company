@@ -8,14 +8,15 @@ This repository is designed as a clean React application that can be used for De
 
 ## 🚀 Features
 
-- **Header & Navigation**: Fixed header with top bar info, quick contact, logo, smooth navigation links, and desktop/mobile quote trigger.
-- **Hero Section**: High-impact logistics banner with clear value proposition and call-to-action buttons.
-- **Services Section**: Interactive cards highlighting Full Truckload (FTL), Less Than Truckload (LTL), Expedited Freight, and Dedicated Transportation.
-- **About Us Section**: Operational overview and statistics counters (10+ Years Experience, 50+ Trucks, 48 States Covered, 99% On-Time Delivery).
-- **Fleet Section**: Cards displaying Modern Trucks, GPS Tracking, Regular Maintenance, and Professional Drivers.
-- **Why Choose Us**: Key logistics differentiators including 24/7 Dispatch and Real-Time Tracking.
-- **Quote Form**: Interactive, frontend-validated freight quote request form.
-- **Contact & Footer**: Corporate location (Chicago, IL), phone, email, operating hours, and quick links.
+- **Navbar**: Logo, links (Home, Services, About, Fleet, Contact) and a "Get a Quote" button. Collapses to a menu on mobile.
+- **Hero**: "Reliable Freight. Delivered On Time." with call-to-action buttons and an inline SVG highway/truck illustration.
+- **Services**: Full Truckload, Less Than Truckload, Expedited Freight, Dedicated Routes, Warehousing & Logistics, Nationwide Delivery.
+- **About**: Company overview and mission.
+- **Why Choose Us**: On-Time Delivery, Experienced Drivers, Modern Fleet, 24/7 Dispatch, Nationwide Coverage, Safety First.
+- **Fleet**: Dry Van, Reefer, Flatbed, Box Truck.
+- **Company Statistics**: 10+ Years Experience, 50+ Trucks, 48 States Covered, 99% On-Time Delivery.
+- **Get a Quote Form**: Frontend-only form with validation (nothing is sent anywhere).
+- **Contact & Footer**: Quick links, services, contact information and copyright.
 
 ---
 
@@ -72,6 +73,20 @@ npm run build
 
 The output build files will be created in the `dist/` directory.
 
+### 5. Docker
+
+The `Dockerfile` uses a multi-stage build:
+
+1. **Stage 1** (`node:22-alpine`): runs `npm ci` and `npm run build` to create `dist/`.
+2. **Stage 2** (`nginx:alpine`): copies `dist/` into `/usr/share/nginx/html` and serves it with `nginx.conf`.
+
+```bash
+docker build -t roadline-trucking:latest .
+docker run -d -p 8080:80 --name roadline-trucking roadline-trucking:latest
+```
+
+Open `http://localhost:8080`. A health check endpoint is available at `http://localhost:8080/health`.
+
 ---
 
 ## 📁 Project Structure
@@ -97,14 +112,19 @@ The output build files will be created in the `dist/` directory.
 │   │   ├── QuoteForm.jsx
 │   │   ├── Services.css
 │   │   ├── Services.jsx
+│   │   ├── Stats.css
+│   │   ├── Stats.jsx
 │   │   ├── WhyChooseUs.css
 │   │   └── WhyChooseUs.jsx
 │   ├── styles/
 │   │   └── global.css
 │   ├── App.jsx
 │   └── main.jsx
+├── .dockerignore
+├── Dockerfile
 ├── eslint.config.js
 ├── index.html
+├── nginx.conf
 ├── package.json
 ├── README.md
 └── vite.config.js

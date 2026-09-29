@@ -20,10 +20,60 @@
 .hero-container {
   position: relative;
   z-index: 2;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
 }
 
 .hero-content {
   max-width: 760px;
+  animation: fade-up 0.8s ease-out both;
+}
+
+.hero-visual {
+  animation: fade-up 0.8s ease-out 0.2s both;
+}
+
+.hero-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(180deg, #0b4f8a 0%, #003366 70%);
+}
+
+.hero-truck {
+  animation: truck-bounce 1.2s ease-in-out infinite;
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes truck-bounce {
+  0%, 100% {
+    transform: translate(120px, 200px);
+  }
+  50% {
+    transform: translate(120px, 198px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-content,
+  .hero-visual,
+  .hero-truck {
+    animation: none;
+  }
 }
 
 .hero-badge {
@@ -57,7 +107,7 @@
 }
 
 .text-highlight {
-  color: #38bdf8;
+  color: #f97316;
 }
 
 .hero-subtitle {
@@ -120,7 +170,7 @@
 }
 
 .highlight-icon {
-  color: #38bdf8;
+  color: #f97316;
 }
 
 @media (min-width: 768px) {
@@ -130,5 +180,11 @@
 
   .hero-title {
     font-size: 3.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-container {
+    grid-template-columns: 1.1fr 1fr;
   }
 }

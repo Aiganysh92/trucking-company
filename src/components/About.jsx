@@ -1,34 +1,7 @@
-import { CheckCircle2, Award, Truck, MapPin, Clock } from 'lucide-react';
+import { CheckCircle2, Target } from 'lucide-react';
 import './About.css';
 
 export default function About() {
-  const stats = [
-    {
-      id: 1,
-      icon: <Award size={28} />,
-      value: '10+',
-      label: 'Years Experience',
-    },
-    {
-      id: 2,
-      icon: <Truck size={28} />,
-      value: '50+',
-      label: 'Trucks in Fleet',
-    },
-    {
-      id: 3,
-      icon: <MapPin size={28} />,
-      value: '48',
-      label: 'States Covered',
-    },
-    {
-      id: 4,
-      icon: <Clock size={28} />,
-      value: '99%',
-      label: 'On-Time Delivery',
-    },
-  ];
-
   return (
     <section id="about" className="about-section">
       <div className="container">
@@ -37,7 +10,7 @@ export default function About() {
             <span className="section-subtitle">Who We Are</span>
             <h2 className="section-title">Moving America Forward</h2>
             <p className="about-text-lead">
-              RoadLine Trucking provides safe, reliable, and efficient transportation services throughout the United States.
+              RoadLine Trucking provides safe and reliable freight transportation throughout the United States.
             </p>
             <p className="about-text">
               Headquartered in Chicago, Illinois, our mission is to deliver exceptional logistics performance through modern equipment, cutting-edge telemetry, and dedicated professional drivers who prioritize cargo safety and timely arrival.
@@ -63,17 +36,18 @@ export default function About() {
             </ul>
           </div>
 
-          <div className="about-stats-card">
-            <h3 className="stats-header-title">RoadLine By The Numbers</h3>
-            <div className="stats-grid">
-              {stats.map((stat) => (
-                <div key={stat.id} className="stat-item">
-                  <div className="stat-icon">{stat.icon}</div>
-                  <div className="stat-value">{stat.value}</div>
-                  <div className="stat-label">{stat.label}</div>
-                </div>
-              ))}
+          <div className="about-mission-card">
+            <div className="mission-icon">
+              <Target size={32} />
             </div>
+            <h3 className="mission-title">Our Mission</h3>
+            <p className="mission-text">
+              To move our customers&apos; freight safely and on schedule, every single time, while treating our
+              drivers and partners with respect.
+            </p>
+            <p className="mission-text">
+              From a single pallet to a full 53&apos; trailer, we handle every load as if it were our own.
+            </p>
           </div>
         </div>
       </div>

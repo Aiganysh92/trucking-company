@@ -1,48 +1,54 @@
-import { Headphones, Radio, Shield, Award, CheckCircle } from 'lucide-react';
+import { Clock, Award, Truck, Headphones, Map, Shield } from 'lucide-react';
 import './WhyChooseUs.css';
 
 export default function WhyChooseUs() {
   const reasons = [
     {
-      id: 'dispatch',
-      icon: <Headphones size={28} />,
-      title: '24/7 Dispatch',
-      description: 'Round-the-clock dispatch operations ensuring constant communication and quick issue resolution.',
-    },
-    {
-      id: 'tracking',
-      icon: <Radio size={28} />,
-      title: 'Real-Time Tracking',
-      description: 'Instant GPS tracking updates so you always know where your freight is in real time.',
+      id: 'on-time',
+      icon: <Clock size={28} />,
+      title: 'On-Time Delivery',
+      description: 'A proven 99% on-time record, backed by careful route planning and live tracking.',
     },
     {
       id: 'drivers',
       icon: <Award size={28} />,
       title: 'Experienced Drivers',
-      description: 'Vetted, highly qualified commercial drivers focused on route safety and punctuality.',
+      description: 'CDL-certified professionals with thousands of accident-free miles behind them.',
+    },
+    {
+      id: 'fleet',
+      icon: <Truck size={28} />,
+      title: 'Modern Fleet',
+      description: 'Late-model tractors and trailers maintained on a strict preventive schedule.',
+    },
+    {
+      id: 'dispatch',
+      icon: <Headphones size={28} />,
+      title: '24/7 Dispatch',
+      description: 'A real person answers the phone day or night to update you on your load.',
+    },
+    {
+      id: 'coverage',
+      icon: <Map size={28} />,
+      title: 'Nationwide Coverage',
+      description: 'Service across all 48 contiguous states, from local lanes to cross-country runs.',
     },
     {
       id: 'safety',
       icon: <Shield size={28} />,
       title: 'Safety First',
-      description: 'Comprehensive safety standards, regular vehicle inspections, and strict regulatory compliance.',
-    },
-    {
-      id: 'delivery',
-      icon: <CheckCircle size={28} />,
-      title: 'Reliable Delivery',
-      description: 'Proven track record of 99% on-time delivery across nationwide distribution routes.',
+      description: 'Regular inspections, full insurance and strict FMCSA compliance on every trip.',
     },
   ];
 
   return (
-    <section className="why-us-section">
+    <section id="why-us" className="why-us-section">
       <div className="container">
         <div className="section-header">
           <span className="section-subtitle">The RoadLine Advantage</span>
           <h2 className="section-title">Why Choose Us</h2>
           <p className="section-description">
-            Industry partners choose RoadLine Trucking for our unwavering commitment to performance, safety, and transparency.
+            Shippers choose RoadLine Trucking for our commitment to performance, safety and transparency.
           </p>
         </div>
 

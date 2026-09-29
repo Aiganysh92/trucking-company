@@ -24,7 +24,7 @@ export default function Footer() {
           </div>
 
           <div className="footer-links-group">
-            <h4 className="footer-title">Navigation</h4>
+            <h4 className="footer-title">Quick Links</h4>
             <ul className="footer-links">
               <li><a href="#home">Home</a></li>
               <li><a href="#services">Services</a></li>
@@ -37,15 +37,17 @@ export default function Footer() {
           <div className="footer-links-group">
             <h4 className="footer-title">Services</h4>
             <ul className="footer-links">
-              <li><a href="#services">Full Truckload (FTL)</a></li>
-              <li><a href="#services">Less Than Truckload (LTL)</a></li>
+              <li><a href="#services">Full Truckload</a></li>
+              <li><a href="#services">Less Than Truckload</a></li>
               <li><a href="#services">Expedited Freight</a></li>
-              <li><a href="#services">Dedicated Transportation</a></li>
+              <li><a href="#services">Dedicated Routes</a></li>
+              <li><a href="#services">Warehousing & Logistics</a></li>
+              <li><a href="#services">Nationwide Delivery</a></li>
             </ul>
           </div>
 
           <div className="footer-links-group">
-            <h4 className="footer-title">Contact Us</h4>
+            <h4 className="footer-title">Contact Information</h4>
             <ul className="footer-contact-info">
               <li>Chicago, IL</li>
               <li>Phone: (773) 555-0100</li>
