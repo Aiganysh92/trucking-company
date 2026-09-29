@@ -129,3 +129,4 @@ Open `http://localhost:8080`. A health check endpoint is available at `http://lo
 ├── README.md
 └── vite.config.js
 ```
+# trucking-company
